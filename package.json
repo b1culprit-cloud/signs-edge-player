@@ -1,0 +1,29 @@
+{
+  "name": "signs-edge-player",
+  "version": "1.0.0",
+  "description": "SIGNS Edge Player Client by TEAM S2H",
+  "main": "main.js",
+  "author": "TEAM S2H",
+  "scripts": {
+    "build:win": "electron-builder --win nsis portable",
+    "build:mac": "electron-builder --mac dmg --universal"
+  },
+  "dependencies": {
+    "electron": "^28.3.3"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.teams2h.signsplayer",
+    "productName": "SIGNS Player",
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "mac": {
+      "target": ["dmg"],
+      "minimumSystemVersion": "11.0",
+      "category": "public.app-category.video"
+    }
+  }
+}
