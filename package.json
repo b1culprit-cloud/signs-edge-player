@@ -5,8 +5,8 @@
   "main": "main.js",
   "author": "TEAM S2H",
   "scripts": {
-    "build:win": "electron-builder --win nsis portable",
-    "build:mac": "electron-builder --mac dmg --universal"
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
   },
   "dependencies": {
     "electron": "^28.3.3"
@@ -17,13 +17,22 @@
   "build": {
     "appId": "com.teams2h.signsplayer",
     "productName": "SIGNS Player",
+    "directories": {
+      "output": "dist"
+    },
     "win": {
-      "target": ["nsis", "portable"]
+      "target": [
+        "nsis",
+        "portable"
+      ]
     },
     "mac": {
-      "target": ["dmg"],
+      "target": [
+        "dmg"
+      ],
       "minimumSystemVersion": "11.0",
-      "category": "public.app-category.video"
+      "category": "public.app-category.video",
+      "identity": null
     }
   }
 }
